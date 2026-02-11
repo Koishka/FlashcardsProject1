@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards - Apprendre en s'amusant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎴 Mes Flashcards</h1>
+            <div class="theme-selector">
+                <label for="theme">Thème :</label>
+                <select id="theme">
+                    <option value="english">Vocabulaire Anglais</option>
+                    <option value="debate">Arguments de Débat</option>
+                    <option value="tech">Termes Techniques</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-label">Carte</span>
+                <span class="stat-value" id="current-card">1</span>
+                <span class="stat-total"> / <span id="total-cards">10</span></span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">✅ Connues</span>
+                <span class="stat-value" id="known-count">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">🔄 À revoir</span>
+                <span class="stat-value" id="review-count">0</span>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card" id="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <p id="question">Clique pour charger une carte</p>
+                    </div>
+                    <div class="card-back">
+                        <p id="answer">Réponse</p>
+                    </div>
+                </div>
+            </div>
+            <p class="hint">💡 Clique sur la carte pour voir la réponse</p>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-review" id="btn-review">🔄 À revoir</button>
+            <button class="btn btn-know" id="btn-know">✅ Je sais</button>
+        </div>
+
+        <div class="navigation">
+            <button class="btn-nav" id="btn-prev">← Précédent</button>
+            <button class="btn-nav" id="btn-next">Suivant →</button>
+        </div>
+
+        <button class="btn-reset" id="btn-reset">🔄 Recommencer</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
